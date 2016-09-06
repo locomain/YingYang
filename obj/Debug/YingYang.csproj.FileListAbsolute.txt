@@ -1,0 +1,5 @@
+C:\Users\Stagiair03\documents\visual studio 2015\Projects\Test\YingYang\bin\Debug\YingYang.dll
+C:\Users\Stagiair03\documents\visual studio 2015\Projects\Test\YingYang\bin\Debug\YingYang.pdb
+C:\Users\Stagiair03\documents\visual studio 2015\Projects\Test\YingYang\obj\Debug\YingYang.dll
+C:\Users\Stagiair03\documents\visual studio 2015\Projects\Test\YingYang\obj\Debug\YingYang.pdb
+C:\Users\Stagiair03\documents\visual studio 2015\Projects\Test\YingYang\obj\Debug\YingYang.csprojResolveAssemblyReference.cache

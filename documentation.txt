@@ -1,0 +1,16 @@
+﻿FEATURES
+	- Add multiple actions to queue
+	- Run actions directly 
+	- Set max Threads in cache ( threads to keep alive )
+	- Recycle/re-use threads
+	- Limit thread use
+	- Merge thread lifecycle with calling thread
+	- Accessable threads
+
+TODO
+	- Find max device possible threads
+	- React to device limit
+	- callback to thread finis?
+	- order
+	- (safety)getting threads/removing reference
+

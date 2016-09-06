@@ -5,7 +5,7 @@ YingYang lets you run async methods directly or in queue on one or multiple cont
 
 
 # Example
-```javascript
+```c#
 	YingYang yy = YingYang.getInstance()
 		.setPreferedThreadPoolCount(1) //max amount of threads used
 		.setMaxThreadCache(1) //max amount of cached/sleaping threads - default value = 1 

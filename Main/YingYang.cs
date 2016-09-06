@@ -12,12 +12,13 @@ namespace com.locomain.thread
 #pragma warning restore
     public class YingYang : ThreadResult
     {
-        public const int THREAD_SLEEP_TIME = 0; //10 seconds
-    
-        public delegate void Result(); //TODO?
+        public const int THREAD_SLEEP_TIME = 0;
 
         private volatile List<Action> _actions;
-        private List<BalanceThread> _pool; //TODO weakreference?
+        private List<BalanceThread> _pool;
+
+        public delegate void onThreadExit();
+        public event onThreadExit threadExitEvent;
 
         private int _threadLifeTime = THREAD_SLEEP_TIME;
         private int _preferedPoolSize = 1;
@@ -208,6 +209,18 @@ namespace com.locomain.thread
         }
 
         /// <summary>
+        /// Adds callback to thread destruction
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        [Obsolete("Experimental, not recommended")]
+        public YingYang addThreadDestructionCallback(onThreadExit e)
+        {
+            threadExitEvent += new onThreadExit(e);
+            return this;
+        }
+
+        /// <summary>
         /// Returns the amount of threads used
         /// </summary>
         /// <returns></returns>
@@ -250,6 +263,7 @@ namespace com.locomain.thread
         public void release(BalanceThread thread)
         {
             Utils.log("thread released from pool");
+            threadExitEvent();
             _pool.Remove(thread);
         }
     }

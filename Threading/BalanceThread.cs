@@ -137,6 +137,7 @@ namespace com.locomain.thread
             _timer.Enabled = false;           
             _shouldRun = false;
             _actions.Clear();
+            _threadResult.release(this);
 
             destroy();  
         }

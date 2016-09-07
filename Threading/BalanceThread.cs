@@ -1,10 +1,7 @@
 ﻿using com.locomain.thread.Threading;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Timers;
 
 namespace com.locomain.thread
@@ -61,6 +58,10 @@ namespace com.locomain.thread
             return _thread == null ? new Thread(threadEngine) : _thread;
         }
 
+        /// <summary>
+        /// Initializer
+        /// </summary>
+        /// <param name="tr"></param>
         private void init(ThreadResult tr)
         {
             _timer = new System.Timers.Timer();
@@ -73,6 +74,10 @@ namespace com.locomain.thread
             _actions = new List<Action>();
         }
 
+
+        /// <summary>
+        /// Main thread logic
+        /// </summary>
         private void threadEngine()
         {
             Utils.log("engine started");   
